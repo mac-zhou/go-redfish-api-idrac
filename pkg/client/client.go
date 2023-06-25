@@ -178,7 +178,7 @@ func (cli *Client) callAPI(method string, contentType string, urlPath string, pa
 	}
 	defer res.Body.Close()
 
-	log.Debugf("API Server responded with %s", res.Status)
+	log.Debugf("%s API Server responded with %s", url, res.Status)
 
 	dataLimiter := io.LimitReader(res.Body, cli.dataLimit)
 	body, err := ioutil.ReadAll(dataLimiter)
@@ -190,7 +190,7 @@ func (cli *Client) callAPI(method string, contentType string, urlPath string, pa
 	case 200:
 		return body, nil
 	default:
-		return nil, fmt.Errorf("error: status code %d: %s", res.StatusCode, string(body))
+		return nil, fmt.Errorf("%s error: status code %d: %s", url, res.StatusCode, string(body))
 	}
 
 	return body, nil
