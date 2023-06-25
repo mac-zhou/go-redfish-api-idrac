@@ -6,7 +6,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/greenpau/go-redfish-api-idrac/pkg/client"
+	"github.com/mac-zhou/go-redfish-api-idrac/pkg/client"
 	"github.com/greenpau/versioned"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
