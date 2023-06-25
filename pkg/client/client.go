@@ -185,7 +185,7 @@ func (cli *Client) callAPI(method string, contentType string, urlPath string, pa
 	if err != nil {
 		return nil, fmt.Errorf("non-EOF error at url %s: %s", url, err)
 	}
-
+	log.Debugln("Response body:", string(body))
 	switch res.StatusCode {
 	case 200:
 		return body, nil
