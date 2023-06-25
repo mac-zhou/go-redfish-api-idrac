@@ -1,4 +1,4 @@
-module github.com/greenpau/go-redfish-api-idrac
+module github.com/mac-zhou/go-redfish-api-idrac
 
 go 1.14
 
