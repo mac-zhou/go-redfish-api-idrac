@@ -114,9 +114,9 @@ type computerSystemLinks struct {
 	ManagedByCounter uint64 `yaml:"ManagedBy@odata.count" json:"ManagedBy@odata.count" xml:"ManagedBy@odata.count"`
 	PoweredBy        []ODataAnnotation
 	PoweredByCounter uint64 `yaml:"PoweredBy@odata.count" json:"PoweredBy@odata.count" xml:"PoweredBy@odata.count"`
-	Oem              struct {
-		Dell map[string]ODataAnnotation
-	}
+	// Oem              struct {
+	// 	Dell map[string]ODataAnnotation
+	// }
 }
 
 type computerSystemBoot struct {
